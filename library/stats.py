@@ -664,11 +664,12 @@ class Disk:
                 free = sensors.Disk.disk_free(mountpoint)
 
             disk_usage_percent = sensors.Disk.disk_usage_percent(mountpoint)
-            save_last_value(disk_usage_percent, cls.last_values_disk_usage, DEFAULT_HISTORY_SIZE)
-            #display_themed_progress_bar(disk_theme_data['USED']['GRAPH'], disk_usage_percent)
-            #display_themed_percent_radial_bar(disk_theme_data['USED']['RADIAL'], disk_usage_percent)
+            save_last_value(disk_usage_percent, cls.last_values_disk_usage,
+                        disk_theme_data['USED']['LINE_GRAPH'].get("HISTORY_SIZE", DEFAULT_HISTORY_SIZE))
+            display_themed_progress_bar(disk_theme_data['USED']['GRAPH'], disk_usage_percent)
+            display_themed_percent_radial_bar(disk_theme_data['USED']['RADIAL'], disk_usage_percent)
             display_themed_percent_value(disk_theme_data['USED']['PERCENT_TEXT'], disk_usage_percent)
-            #display_themed_line_graph(disk_theme_data['USED']['LINE_GRAPH'], cls.last_values_disk_usage)
+            display_themed_line_graph(disk_theme_data['USED']['LINE_GRAPH'], cls.last_values_disk_usage)
 
             display_themed_value(
                 theme_data=disk_theme_data['USED']['TEXT'],

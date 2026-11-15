@@ -3,17 +3,17 @@
 USED:
   GRAPH:
     SHOW: False
+  RADIAL:
+    SHOW: False
+  LINE_GRAPH:
+    SHOW: False
   TEXT:
     SHOW: False
-    SHOW_UNIT: False
   PERCENT_TEXT:
     SHOW: False
-    SHOW_UNIT: False
 TOTAL:
   TEXT:
     SHOW: False
-    SHOW_UNIT: False
 FREE:
   TEXT:
     SHOW: False
-    SHOW_UNIT: False
